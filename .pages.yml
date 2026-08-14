@@ -1,0 +1,12 @@
+media:
+  input: assets
+  output: /assets
+content:
+  - name: website
+    label: INKMANIA
+    type: file
+    path: index.html
+    fields:
+      - name: body
+        label: Sivun sisältö
+        type: code
