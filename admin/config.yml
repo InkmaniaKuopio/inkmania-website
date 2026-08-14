@@ -1,0 +1,28 @@
+backend:
+  name: github
+  repo: InkmaniaKuopio/inkmania-website
+  branch: main
+
+media_folder: "assets"
+public_folder: "/assets"
+
+collections:
+  - name: "artists"
+    label: "Artistit"
+    folder: "Data"
+    create: true
+    extension: "json"
+    format: "json"
+    fields:
+      - label: "Nimi"
+        name: "name"
+        widget: "string"
+      - label: "Studio / kaupunki"
+        name: "studio"
+        widget: "string"
+      - label: "Instagram"
+        name: "instagram"
+        widget: "string"
+      - label: "Kuva"
+        name: "image"
+        widget: "image"
