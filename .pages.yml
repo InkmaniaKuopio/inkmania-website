@@ -1,12 +1,25 @@
 media:
   input: assets
   output: /assets
+
 content:
-  - name: website
-    label: INKMANIA
+  - name: artists
+    label: Artistit
     type: file
-    path: index.html
+    path: data/artists.json
+    format: json
+    list: true
     fields:
-      - name: body
-        label: Sivun sisältö
-        type: code
+      - name: name
+        label: Nimi
+        type: string
+        required: true
+      - name: studio
+        label: Studio / kaupunki
+        type: string
+      - name: instagram
+        label: Instagram
+        type: string
+      - name: image
+        label: Kuva
+        type: image
