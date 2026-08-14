@@ -1,8 +1,25 @@
-[
-  {
-    "name": "Testiartisti",
-    "studio": "",
-    "instagram": "",
-    "image": ""
-  }
-]
+media:
+  input: assets
+  output: /assets
+
+content:
+  - name: artists
+    label: Artistit
+    type: collection
+    path: artists
+    filename: "{primary}.json"
+    format: json
+    fields:
+      - name: name
+        label: Nimi
+        type: string
+        required: true
+      - name: studio
+        label: Studio / kaupunki
+        type: string
+      - name: instagram
+        label: Instagram
+        type: string
+      - name: image
+        label: Kuva
+        type: image
