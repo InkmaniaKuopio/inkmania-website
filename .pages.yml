@@ -5,10 +5,9 @@ media:
 content:
   - name: artists
     label: Artistit
-    type: file
-    path: Data/artists.json
+    type: collection
+    path: artists
     format: json
-    list: true
     fields:
       - name: name
         label: Nimi
