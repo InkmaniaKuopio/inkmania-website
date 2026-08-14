@@ -6,7 +6,7 @@ content:
   - name: artists
     label: Artistit
     type: file
-    path: data/artists.json
+    path: Data/artists.json
     format: json
     list: true
     fields:
