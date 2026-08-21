@@ -3,63 +3,377 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="INKMANIA – vuosittainen tatuointitapahtuma Kuopiossa.">
-<title>INKMANIA</title>
+<meta name="description" content="INKMANIA 28.–29.5.2027 – tatuointitapahtuma Kuopiossa.">
+<title>INKMANIA 2027</title>
+
 <style>
 :root{
-  --night:#080807; --espresso:#1c1714; --taupe:#302923; --sand:#cfc1ad;
-  --cream:#f3ebdf; --paper:#e7ddd0; --ink:#171513; --muted:#a89e92; --line:#4a4038;
+  --night:#080807;
+  --espresso:#1c1714;
+  --taupe:#302923;
+  --sand:#cfc1ad;
+  --cream:#f3ebdf;
+  --paper:#e7ddd0;
+  --ink:#171513;
+  --muted:#a89e92;
+  --line:#4a4038;
 }
-*{box-sizing:border-box} html{scroll-behavior:smooth}
-body{margin:0;background:var(--espresso);color:var(--cream);font-family:Arial,Helvetica,sans-serif}
-nav{position:fixed;z-index:40;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:22px 5vw;background:linear-gradient(#090807f5,#090807aa 55%,transparent)}
-nav .brand{font-family:Georgia,serif;font-size:18px;letter-spacing:.22em}
-nav .links{display:flex;gap:23px} nav a{color:var(--cream);text-decoration:none;font-size:11px;letter-spacing:.13em;text-transform:uppercase}
-.hero{min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 6vw 55px;background:
-radial-gradient(ellipse at 50% 38%,#46372c 0,#211b17 28%,#0d0c0b 61%,#060606 100%)}
-.hero-inner{max-width:1200px;width:100%}
-.logo{display:block;width:min(100%,1050px);margin:auto;mix-blend-mode:screen}
-.eyebrow,.kicker{text-transform:uppercase;letter-spacing:.3em;font-size:11px;color:#b9ab9c}
-h1,h2{font-family:Georgia,serif;font-weight:400}
-h1{font-size:clamp(30px,5vw,66px);margin:18px 0 8px}
-h2{font-size:clamp(40px,6vw,78px);margin:12px 0 28px}
-.lead,p{line-height:1.72}.lead{font-size:clamp(16px,2vw,22px);color:#d3c8bb}
-p{max-width:760px;font-size:17px;color:#d2c6b9}
-.btn{display:inline-block;margin-top:26px;border:1px solid #d9cdbd;padding:14px 22px;color:var(--cream);text-decoration:none;text-transform:uppercase;letter-spacing:.16em;font-size:11px}
-section{padding:100px 8vw;border-top:1px solid #4c423a}.wrap{max-width:1160px;margin:auto}
-.sand{background:var(--paper);color:var(--ink)} .sand p{color:#514941}.sand .kicker{color:#75695d}
-.taupe{background:linear-gradient(135deg,#362e28,#211c18)} .espresso{background:linear-gradient(135deg,#211b17,#151210)}
-.media-split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.photo{width:100%;display:block;aspect-ratio:4/3;object-fit:cover;filter:brightness(.92)}
-.photo.tall{aspect-ratio:4/5}
-.fullbleed{position:relative;min-height:72vh;padding:0;overflow:hidden}
-.fullbleed img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.fullbleed:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0a0908d9 0,#0a09089a 42%,#0a090830 75%,transparent)}
-.overlaycopy{position:relative;z-index:2;max-width:1160px;margin:auto;padding:120px 8vw}
-.overlaycopy h2{max-width:650px}.overlaycopy p{max-width:620px}
-.mosaic{display:grid;grid-template-columns:1.4fr .6fr;gap:18px;margin-top:45px}
-.mosaic img{width:100%;height:100%;object-fit:cover;min-height:380px}
-.mosaic .stack{display:grid;gap:18px}.mosaic .stack img{min-height:181px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}
-.card{min-height:240px;border:1px solid #5a4d43;padding:28px;display:flex;flex-direction:column;justify-content:flex-end;background:rgba(255,255,255,.025)}
-.card h3{font-family:Georgia,serif;font-size:28px;margin:0 0 8px}.card span{color:#b3a79b;font-size:12px;letter-spacing:.12em}
-.schedule{margin-top:35px;border-top:1px solid #6a5d51}.row{display:grid;grid-template-columns:160px 1fr;padding:21px 0;border-bottom:1px solid #5a4e44}
-.row b{font-family:Georgia,serif;font-size:21px}.row span{color:#c8bcaf}.two{display:grid;grid-template-columns:1fr 1fr;gap:70px}
-.big{font-family:Georgia,serif;font-size:clamp(34px,5vw,62px);line-height:1.08}
-footer{padding:50px 8vw;background:#080807;color:#8b8176;border-top:1px solid #3b342e;font-size:12px;letter-spacing:.1em}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  background:var(--espresso);
+  color:var(--cream);
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+nav{
+  position:fixed;
+  z-index:40;
+  top:0;
+  left:0;
+  right:0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:22px 5vw;
+  background:linear-gradient(#090807f5,#090807aa 55%,transparent);
+}
+
+nav .brand{
+  font-family:Georgia,serif;
+  font-size:18px;
+  letter-spacing:.22em;
+}
+
+nav .links{
+  display:flex;
+  gap:23px;
+}
+
+nav a{
+  color:var(--cream);
+  text-decoration:none;
+  font-size:11px;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+
+.hero{
+  min-height:100svh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:100px 6vw 55px;
+  background:
+  radial-gradient(
+    ellipse at 50% 38%,
+    #46372c 0,
+    #211b17 28%,
+    #0d0c0b 61%,
+    #060606 100%
+  );
+}
+
+.hero-inner{
+  max-width:1200px;
+  width:100%;
+}
+
+.logo{
+  display:block;
+  width:min(100%,1050px);
+  margin:auto;
+  mix-blend-mode:screen;
+}
+
+.eyebrow,
+.kicker{
+  text-transform:uppercase;
+  letter-spacing:.3em;
+  font-size:11px;
+  color:#b9ab9c;
+}
+
+h1,h2{
+  font-family:Georgia,serif;
+  font-weight:400;
+}
+
+h1{
+  font-size:clamp(30px,5vw,66px);
+  margin:18px 0 8px;
+}
+
+h2{
+  font-size:clamp(40px,6vw,78px);
+  margin:12px 0 28px;
+}
+
+.lead,p{
+  line-height:1.72;
+}
+
+.lead{
+  font-size:clamp(16px,2vw,22px);
+  color:#d3c8bb;
+}
+
+p{
+  max-width:760px;
+  font-size:17px;
+  color:#d2c6b9;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:26px;
+  border:1px solid #d9cdbd;
+  padding:14px 22px;
+  color:var(--cream);
+  text-decoration:none;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  font-size:11px;
+}
+
+.sand .btn{
+  color:var(--ink);
+  border-color:#6f6257;
+}
+
+section{
+  padding:100px 8vw;
+  border-top:1px solid #4c423a;
+}
+
+.wrap{
+  max-width:1160px;
+  margin:auto;
+}
+
+.sand{
+  background:var(--paper);
+  color:var(--ink);
+}
+
+.sand p{
+  color:#514941;
+}
+
+.sand .kicker{
+  color:#75695d;
+}
+
+.taupe{
+  background:linear-gradient(135deg,#362e28,#211c18);
+}
+
+.espresso{
+  background:linear-gradient(135deg,#211b17,#151210);
+}
+
+.media-split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.photo{
+  width:100%;
+  display:block;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  filter:brightness(.92);
+}
+
+.photo.tall{
+  aspect-ratio:4/5;
+}
+
+.fullbleed{
+  position:relative;
+  min-height:72vh;
+  padding:0;
+  overflow:hidden;
+}
+
+.fullbleed img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.fullbleed:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    90deg,
+    #0a0908d9 0,
+    #0a09089a 42%,
+    #0a090830 75%,
+    transparent
+  );
+}
+
+.overlaycopy{
+  position:relative;
+  z-index:2;
+  max-width:1160px;
+  margin:auto;
+  padding:120px 8vw;
+}
+
+.overlaycopy h2{
+  max-width:650px;
+}
+
+.overlaycopy p{
+  max-width:620px;
+}
+
+.mosaic{
+  display:grid;
+  grid-template-columns:1.4fr .6fr;
+  gap:18px;
+  margin-top:45px;
+}
+
+.mosaic img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  min-height:380px;
+}
+
+.mosaic .stack{
+  display:grid;
+  gap:18px;
+}
+
+.mosaic .stack img{
+  min-height:181px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:42px;
+}
+
+.card{
+  min-height:240px;
+  border:1px solid #5a4d43;
+  padding:28px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  background:rgba(255,255,255,.025);
+}
+
+.sand .card{
+  border-color:#9d8f81;
+  background:rgba(255,255,255,.18);
+}
+
+.card h3{
+  font-family:Georgia,serif;
+  font-size:28px;
+  margin:0 0 8px;
+}
+
+.card span{
+  color:#b3a79b;
+  font-size:12px;
+  letter-spacing:.12em;
+}
+
+.sand .card span{
+  color:#75695d;
+}
+
+.card p{
+  font-size:15px;
+  margin:8px 0 0;
+}
+
+.schedule{
+  margin-top:35px;
+  border-top:1px solid #6a5d51;
+}
+
+.row{
+  display:grid;
+  grid-template-columns:160px 1fr;
+  padding:21px 0;
+  border-bottom:1px solid #5a4e44;
+}
+
+.row b{
+  font-family:Georgia,serif;
+  font-size:21px;
+}
+
+.row span{
+  color:#c8bcaf;
+}
+
+.two{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+}
+
+.big{
+  font-family:Georgia,serif;
+  font-size:clamp(34px,5vw,62px);
+  line-height:1.08;
+}
+
+footer{
+  padding:50px 8vw;
+  background:#080807;
+  color:#8b8176;
+  border-top:1px solid #3b342e;
+  font-size:12px;
+  letter-spacing:.1em;
+}
+
 @media(max-width:820px){
-  nav .links{gap:11px}nav a{font-size:9px}
-  .media-split,.two,.mosaic,.grid{grid-template-columns:1fr}.mosaic .stack{grid-template-columns:1fr 1fr}
-  .row{grid-template-columns:1fr;gap:5px} section{padding:74px 7vw}.logo{width:115%;margin-left:-7.5%}
+  nav .links{gap:11px}
+  nav a{font-size:9px}
+  .media-split,.two,.mosaic,.grid{grid-template-columns:1fr}
+  .mosaic .stack{grid-template-columns:1fr 1fr}
+  .row{grid-template-columns:1fr;gap:5px}
+  section{padding:74px 7vw}
+  .logo{width:115%;margin-left:-7.5%}
 }
-@media(max-width:600px){nav .links{display:none}.mosaic .stack{grid-template-columns:1fr}.fullbleed{min-height:64vh}}
+
+@media(max-width:600px){
+  nav .links{display:none}
+  .mosaic .stack{grid-template-columns:1fr}
+  .fullbleed{min-height:64vh}
+}
 </style>
 </head>
+
 <body>
+
 <nav>
   <div class="brand">INKMANIA</div>
   <div class="links">
-    <a href="#event">Tapahtuma</a><a href="#artists">Artistit</a><a href="#program">Ohjelma</a><a href="#schedule">Aikataulu</a>
+    <a href="#event">Tapahtuma</a>
+    <a href="#artists">Artistit</a>
+    <a href="#program">Ohjelma</a>
+    <a href="#schedule">Aikataulu</a>
   </div>
 </nav>
 
@@ -67,87 +381,311 @@ footer{padding:50px 8vw;background:#080807;color:#8b8176;border-top:1px solid #3
   <div class="hero-inner">
     <img class="logo" src="assets/inkmania-logo.png" alt="INKMANIA">
     <div class="eyebrow">Annual Tattoo Event</div>
-    <h1>JUNE · KUOPIO</h1>
-    <div class="lead">Luoto Kuopio<br>Tarkka ajankohta julkaistaan myöhemmin.</div>
+
+    <h1>28.–29.5.2027 · KUOPIO</h1>
+
+    <div class="lead">
+      Luoto Kuopio<br>
+      Tatuointeja · taidetta · show’ta · kulttuuria
+    </div>
+
     <a class="btn" href="#event">Tutustu tapahtumaan</a>
   </div>
 </header>
 
 <section id="event" class="sand">
   <div class="wrap media-split">
+
     <div>
-      <div class="kicker">INKMANIA</div>
+      <div class="kicker">INKMANIA 2027</div>
+
       <h2>Ink. Art. People.</h2>
-      <p>INKMANIA on vuosittainen tatuointitapahtuma, joka kokoaa tatuointikulttuurin, taiteen ja tekijät saman katon alle Kuopiossa.</p>
-      <p>Tapahtuma järjestetään kesäkuussa Luoto Kuopiossa. Seuraavan tapahtuman päivämäärä, liput ja tarkemmat tiedot julkaistaan myöhemmin.</p>
+
+      <p>
+        INKMANIA on tatuointitapahtuma, joka kokoaa tatuointikulttuurin,
+        taiteen, tekijät ja yleisön saman katon alle Kuopiossa.
+      </p>
+
+      <p>
+        Seuraava INKMANIA järjestetään
+        <strong>28.–29.5.2027 Luoto Kuopiossa</strong>.
+        Koko viikonlopun ajan luvassa on tatuointeja sekä ohjelmaa,
+        taidetta ja elämyksiä.
+      </p>
+
+      <p>
+        Ohjelma täydentyy jatkuvasti – lisää artisteja, esiintyjiä
+        ja ohjelmanumeroita julkaistaan myöhemmin.
+      </p>
     </div>
-    <img class="photo" src="assets/tattoo-closeup.jpg" alt="Tatuointia tehdään Inkmania-tapahtumassa">
+
+    <img
+      class="photo"
+      src="assets/tattoo-closeup.jpg"
+      alt="Tatuointia tehdään Inkmania-tapahtumassa"
+    >
+
   </div>
 </section>
 
 <section class="fullbleed">
-  <img src="assets/inkmania-stage-bw.jpg" alt="Inkmanian tunnelmaa">
+
+  <img
+    src="assets/inkmania-stage-bw.jpg"
+    alt="Inkmanian tunnelmaa"
+  >
+
   <div class="overlaycopy">
+
     <div class="kicker">Since the beginning</div>
+
     <h2>A new chapter for INKMANIA.</h2>
-    <p>Sama tapahtumahenki, uusi ilme. Tatuointikulttuuri, yhteisö, ohjelma ja live-tunnelma kohtaavat jälleen.</p>
+
+    <p>
+      Sama tapahtumahenki, uusi ilme.
+      Tatuointikulttuuri, yhteisö, ohjelma
+      ja live-tunnelma kohtaavat jälleen.
+    </p>
+
   </div>
 </section>
 
 <section id="artists" class="taupe">
+
   <div class="wrap">
-    <div class="kicker">Artists</div><h2>Tattoo artists</h2>
-    <p>Seuraavan INKMANIAn artistikattaus julkaistaan myöhemmin.</p>
+
+    <div class="kicker">Artists</div>
+
+    <h2>Tattoo artists</h2>
+
+    <p>
+      INKMANIA 2027 -artistikattaus julkaistaan vaiheittain.
+      Lisää nimiä tulossa.
+    </p>
+
     <div class="grid">
-      <div class="card"><h3>Artists</h3><span>COMING SOON</span></div>
-      <div class="card"><h3>Artists</h3><span>COMING SOON</span></div>
-      <div class="card"><h3>Artists</h3><span>COMING SOON</span></div>
+
+      <div class="card">
+        <h3>Artists</h3>
+        <span>COMING SOON</span>
+      </div>
+
+      <div class="card">
+        <h3>Artists</h3>
+        <span>COMING SOON</span>
+      </div>
+
+      <div class="card">
+        <h3>Artists</h3>
+        <span>COMING SOON</span>
+      </div>
+
     </div>
+
   </div>
 </section>
 
 <section id="program" class="sand">
+
   <div class="wrap">
-    <div class="kicker">Program</div><h2>More than tattoos.</h2>
-    <p>Tatuointeja, kilpailuja, live-ohjelmaa, taidetta ja tapahtumatunnelmaa. Ohjelma julkaistaan lähempänä tapahtumaa.</p>
-    <div class="mosaic">
-      <img src="assets/stage-drums.jpg" alt="Live-ohjelmaa Inkmaniassa">
-      <div class="stack">
-        <img src="assets/upright-bass.jpg" alt="Muusikko Inkmaniassa">
-        <img src="assets/event-portrait.jpg" alt="Inkmanian tunnelmaa">
+
+    <div class="kicker">Program</div>
+
+    <h2>More than tattoos.</h2>
+
+    <p>
+      INKMANIAssa tatuointikulttuuri kohtaa performancen,
+      katutaiteen ja muun kaupunkikulttuurin.
+      Tässä ensimmäiset varmistuneet ohjelmanumerot –
+      lisää julkaisuja on tulossa.
+    </p>
+
+    <div class="grid">
+
+      <div class="card">
+
+        <span>PERFORMANCE</span>
+
+        <h3>Nes Tiffany</h3>
+
+        <p>
+          Visuaalinen live-performance osana INKMANIA 2027 -ohjelmaa.
+        </p>
+
+        <a
+          class="btn"
+          href="https://www.instagram.com/nestiffany?igsi=bHd4M3c3cTRiN2hu"
+          target="_blank"
+          rel="noopener"
+        >
+          Instagram
+        </a>
+
       </div>
+
+      <div class="card">
+
+        <span>STREET ART</span>
+
+        <h3>Graffitikilpailut</h3>
+
+        <p>
+          Graffitikilpailut toteutetaan yhteistyössä Urbaani ry:n kanssa.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <span>LA 29.5. · KLO 12–17</span>
+
+        <h3>INKMANIA Culture Show</h3>
+
+        <p>
+          Luodon piha-alueella graffitia,
+          auto- ja moottoripyöränäyttelyä
+          sekä muuta katukulttuuria.
+        </p>
+
+      </div>
+
     </div>
+
+    <div class="mosaic">
+
+      <img
+        src="assets/stage-drums.jpg"
+        alt="Live-ohjelmaa Inkmaniassa"
+      >
+
+      <div class="stack">
+
+        <img
+          src="assets/upright-bass.jpg"
+          alt="Muusikko Inkmaniassa"
+        >
+
+        <img
+          src="assets/event-portrait.jpg"
+          alt="Inkmanian tunnelmaa"
+        >
+
+      </div>
+
+    </div>
+
   </div>
 </section>
 
 <section id="schedule" class="espresso">
+
   <div class="wrap media-split">
+
     <div>
-      <div class="kicker">Schedule</div><h2>Aikataulu</h2>
-      <p>Tapahtuman tarkka aikataulu julkaistaan myöhemmin.</p>
+
+      <div class="kicker">Schedule</div>
+
+      <h2>Aikataulu</h2>
+
+      <p>
+        Tapahtuma järjestetään 28.–29.5.2027.
+        Tarkempi päiväkohtainen ohjelma ja kellonajat
+        julkaistaan ohjelman varmistuessa.
+      </p>
+
       <div class="schedule">
-        <div class="row"><b>Kesäkuu</b><span>Tapahtumapäivä vahvistetaan myöhemmin</span></div>
-        <div class="row"><b>Luoto Kuopio</b><span>Ovet, ohjelma ja kilpailujen aikataulut tulossa</span></div>
+
+        <div class="row">
+          <b>Pe 28.5.</b>
+          <span>INKMANIA · ohjelma täydentyy</span>
+        </div>
+
+        <div class="row">
+          <b>La 29.5.</b>
+          <span>INKMANIA · ohjelma täydentyy</span>
+        </div>
+
+        <div class="row">
+          <b>La 12–17</b>
+          <span>INKMANIA Culture Show · Luodon piha-alue</span>
+        </div>
+
       </div>
+
     </div>
-    <img class="photo tall" src="assets/tattoo-action.jpg" alt="Tatuointikulttuuria Inkmaniassa">
+
+    <img
+      class="photo tall"
+      src="assets/tattoo-action.jpg"
+      alt="Tatuointikulttuuria Inkmaniassa"
+    >
+
   </div>
 </section>
 
 <section id="tickets" class="sand">
+
   <div class="wrap two">
-    <div><div class="kicker">Tickets</div><h2>Liput</h2><p>Lipputyypit, hinnat ja myynnin aloitus julkaistaan myöhemmin.</p></div>
-    <div class="big">Tickets<br>coming soon.</div>
+
+    <div>
+
+      <div class="kicker">Tickets</div>
+
+      <h2>Liput</h2>
+
+      <p>
+        Lipputyypit, hinnat ja myynnin aloitus julkaistaan myöhemmin.
+      </p>
+
+    </div>
+
+    <div class="big">
+      Tickets<br>
+      coming soon.
+    </div>
+
   </div>
 </section>
 
 <section id="venue" class="taupe">
+
   <div class="wrap two">
-    <div><div class="kicker">Venue</div><h2>Luoto Kuopio</h2><p>Saapumisohjeet ja muut käytännön tiedot lisätään tänne ennen tapahtumaa.</p></div>
-    <div><div class="kicker">Contact</div><h2>Yhteys & some</h2><p>Yhteystiedot, Instagram ja yhteistyökumppanit lisätään tänne.</p></div>
+
+    <div>
+
+      <div class="kicker">Venue</div>
+
+      <h2>Luoto Kuopio</h2>
+
+      <p>
+        INKMANIA 28.–29.5.2027.
+        Saapumisohjeet ja muut käytännön tiedot
+        lisätään tänne ennen tapahtumaa.
+      </p>
+
+    </div>
+
+    <div>
+
+      <div class="kicker">Contact</div>
+
+      <h2>Yhteys & some</h2>
+
+      <p>
+        info@inkmania.fi<br>
+        Instagram ja yhteistyökumppanit julkaistaan täällä.
+      </p>
+
+    </div>
+
   </div>
 </section>
 
-<footer><div class="wrap">INKMANIA © 2026</div></footer>
+<footer>
+  <div class="wrap">
+    INKMANIA © 2027
+  </div>
+</footer>
+
 </body>
 </html>
