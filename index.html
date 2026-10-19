@@ -363,6 +363,30 @@ footer{
   .fullbleed{min-height:64vh}
 }
 </style>
+  
+@media (max-width: 820px) {
+  #schedule .media-split {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  #schedule .media-split > div {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  #schedule .photo {
+    position: static;
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    object-fit: cover;
+    display: block;
+  }
+}
+
 </head>
 
 <body>
